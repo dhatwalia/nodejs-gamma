@@ -1,9 +1,15 @@
 var http = require('http');
+var url = require('url');
 var dt = require('./04-modules');
 
 http.createServer(function (req, res) {
   res.writeHead(200, { 'Content-Type': 'text/plain' });
   res.write("The date and time are currently: " + dt.myDateTime() + "\n");
+
+  // Split the query
+  var splitQuery = url.parse(req.url, true).query;
+  res.write("This is the month of " + splitQuery.month + " " + splitQuery.year + ". \n");
+
   res.end('Hello World!');
 }).listen(8080);
 
