@@ -1,4 +1,5 @@
 var http = require('http');
+var uc = require('upper-case');
 var url = require('url');
 var dt = require('./04-modules');
 
@@ -10,7 +11,7 @@ http.createServer(function (req, res) {
   var splitQuery = url.parse(req.url, true).query;
   res.write("This is the month of " + splitQuery.month + " " + splitQuery.year + ". \n");
 
-  res.end('Hello World!');
+  res.end(uc.upperCase("Hello World!"));
 }).listen(8080);
 
 console.log('This example is different!');

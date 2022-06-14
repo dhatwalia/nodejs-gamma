@@ -9,3 +9,7 @@ In the project directory, you can run:
 ### `node filename.js`
 
 Executes the the .js file.
+
+### `npm install package-name`
+
+Installs Node.js packages.
