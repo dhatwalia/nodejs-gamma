@@ -2,6 +2,7 @@
   "dependencies": {
     "formidable": "^2.0.1",
     "mongodb": "^4.7.0",
+    "mysql": "^2.18.1",
     "upper-case": "^2.0.2"
   }
 }
